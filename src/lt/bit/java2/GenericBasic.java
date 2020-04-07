@@ -1,5 +1,7 @@
 package lt.bit.java2;
 
+import java.util.function.Function;
+
 public class GenericBasic {
 
 
@@ -35,10 +37,10 @@ public class GenericBasic {
 //        else return b;
 //    }
 
-//    static <T extends Comparable> T min(T a, T b) {
-//        if (a.compareTo(b) < 0) return a;
-//        else return b;
-//    }
+    static <T extends Comparable> T min(T a, T b) {
+        if (a.compareTo(b) < 0) return a;
+        else return b;
+    }
 
     static <T> T min(T a, T b, Lygiuoti<T> lygiavimas) {
         if (lygiavimas.arMaziau(a, b)) return a;
