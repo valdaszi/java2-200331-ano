@@ -120,6 +120,7 @@ public class KolekcijuSrautai2 {
         long length = studentsNamesStream.count();
         System.out.println(length);
 
+        // cia bus klaida nes studentsNamesStream jau panaudotas!!!!
         System.out.println(studentsNamesStream.findAny().isEmpty());
 
     }
