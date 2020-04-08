@@ -111,12 +111,15 @@ public class KolekcijuSrautai2 {
 
 
 
+        // stream'as (studentsNamesStream) nebus paleistas kol nebus galutines operacijos
         Stream<String> studentsNamesStream = studentai.stream()
                 .filter(s -> "kaunas".equalsIgnoreCase(s.getMiestas()))
                 .map(Studentas::getName)
                 .peek(System.out::println);
         System.out.println("studentsNamesStream -->");
 
+        // tik kai bandysim suskaiciuoti stream'o dydi (count) tai stream'as pasileis
+        // ir tik dabar bus atspausdinti ir studentu vardai!!!
         long length = studentsNamesStream.count();
         System.out.println(length);
 
