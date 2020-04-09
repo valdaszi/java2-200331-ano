@@ -69,6 +69,7 @@ public class KolekcijuSrautai2 {
         // 3. Reikia paskaiciuoti kiekvieno studento pazymiu vidurki
         // List<StudentoVidurkis> resultatas;
         class StudentoVidurkis {
+            int i;
             Studentas studentas;
             double vidurkis;
         }
@@ -79,6 +80,7 @@ public class KolekcijuSrautai2 {
         //      b.3) suskaiciuojam vidurki
         // c) sudedame StudentoVidurkis objektus i lista
 
+        nr = 1;
         List<StudentoVidurkis> rezultatas = studentai.stream()
                 .map(s -> {
                     StudentoVidurkis studentoVidurkis = new StudentoVidurkis();
@@ -88,6 +90,7 @@ public class KolekcijuSrautai2 {
                             .mapToInt(Pazymys::getPazymys)
                             .average()
                             .orElse(0);
+                    studentoVidurkis.i = nr++;  // taip negerai!!!!
                     return studentoVidurkis;
                 })
                 .collect(Collectors.toList());
@@ -126,8 +129,11 @@ public class KolekcijuSrautai2 {
         // cia bus klaida nes studentsNamesStream jau panaudotas!!!!
         System.out.println(studentsNamesStream.findAny().isEmpty());
 
+
+
     }
 
+    static int nr = 0;
 
 }
 
