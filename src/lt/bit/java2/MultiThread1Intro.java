@@ -1,6 +1,6 @@
 package lt.bit.java2;
 
-public class MultiThreadIntro {
+public class MultiThread1Intro {
 
     public static void main(String[] args) {
 
